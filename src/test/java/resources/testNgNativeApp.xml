@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Native Test Suite">
+
+    <parameter name="property path" value="src/main/resources/nativeTest.properties"/>
+
+    <test name="Native Test">
+
+        <groups>
+            <run>
+                <include name="native"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="scenarios.nativeAppTest"/>
+            <class name="scenarios.Hooks"/>
+        </classes>
+
+    </test>
+
+</suite>
+
