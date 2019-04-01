@@ -22,11 +22,4 @@ public class webTest {
         assertEquals(driver().getTitle(), TITLE.key);
     }
 
-   /*@Test
-    public void webTest() throws InterruptedException{
-        driver.get("http://iana.org");
-       // wait.until(ExpectedCondition.urlToBe(SUT+"/"));
-        System.out.println("Site opening done");
-    }*/
-
 }

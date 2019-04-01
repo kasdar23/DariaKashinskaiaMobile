@@ -3,9 +3,11 @@ package entities;
 public enum OptionsKeys {
 
     DEVICE_KEY("device"),
+    DEVICE_UDID_KEY("udid"),
     PLATFORM_KEY("platform"),
     AUT_KEY("aut"),
-    APP_PATH_KEY("appPathInDevice"),
+    APP_PACKAGE_KEY("appPackage"),
+    ADD_ACTIVITY_KEY("addActivity"),
     DRIVER_KEY("driver"),
     DRIVER_PATH_KEY("driverPath"),
     BROWSER_KEY("browser"),
