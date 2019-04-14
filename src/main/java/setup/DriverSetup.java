@@ -55,11 +55,7 @@ public class DriverSetup {
         switch (TEST_PLATFORM) {
             case "Android":
                 capabilities.setCapability(DEVICE_NAME, DEVICE);
-                browserName = "Chrome";
-                //
-                capabilities.setCapability("chromedriverExecutable",
-                        new File(DRIVER_PATH).getAbsolutePath());
-                //
+                browserName = "Chrome";       
                 break;
             case "iOS":
                 browserName = "Safari";
@@ -74,6 +70,10 @@ public class DriverSetup {
             capabilities.setCapability(APP, new File(AUT).getAbsolutePath());
         } else if (SUT != null && AUT == null) {
             capabilities.setCapability(BROWSER_NAME, browserName);
+             //
+                capabilities.setCapability("chromedriverExecutable",
+                        new File(DRIVER_PATH).getAbsolutePath());
+             //
         } else {
             throw new IllegalArgumentException("Unknown momile apps type.");
         }
