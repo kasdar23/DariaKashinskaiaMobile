@@ -24,7 +24,7 @@ public class Hooks {
 
     @AfterSuite(groups = {"web", "native"})
     public void tearDown() throws MalformedURLException {
-      //  driver().quit();
+        driver().quit();
         System.out.println("tearDown");
     }
 

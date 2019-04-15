@@ -17,17 +17,17 @@ import static org.openqa.selenium.remote.CapabilityType.PLATFORM_NAME;
 
 public class DriverSetup {
 
-    protected static AppiumDriver driver;
-    protected static WebDriverWait wait;
+    private static AppiumDriver driver;
+    private static WebDriverWait wait;
 
-    protected static String DEVICE;
-    protected static String DEVICE_UDID;
-    protected static String TEST_PLATFORM;
-    protected static String AUT;
+    private static String DEVICE;
+    private static String DEVICE_UDID;
+    private static String TEST_PLATFORM;
+    private static String AUT;
     public static String APP_PAKAGES;
-    protected static String APP_ACTIVITYS;
-    protected static String DRIVER;
-    public static String BROWSER_TITLE;
+    private static String APP_ACTIVITYS;
+    private static String DRIVER;
+    private static String BROWSER_TITLE;
     public static String SUT;
 
     private DriverSetup() {
@@ -43,7 +43,7 @@ public class DriverSetup {
         DRIVER = properties.getProp(DRIVER_KEY.key);
         BROWSER_TITLE = properties.getProp(BROWSER_KEY.key);
         String t_sut = properties.getProp(SUT_KEY.key);
-        SUT = t_sut == null ? null : "http://" + t_sut;
+        SUT = t_sut == null ? null : "https://" + t_sut;
     }
 
     public static void prepareDriver() throws MalformedURLException {
@@ -69,7 +69,7 @@ public class DriverSetup {
             capabilities.setCapability(UDID, DEVICE_UDID);
             capabilities.setCapability(APP_PACKAGE, APP_PAKAGES);
             capabilities.setCapability(APP_ACTIVITY, APP_ACTIVITYS);
-            capabilities.setCapability("autoLaunch", false);
+            capabilities.setCapability("autoLaunch", true);
         } else if (SUT != null && AUT == null) {
             capabilities.setCapability(BROWSER_NAME, browserName);
         } else {
