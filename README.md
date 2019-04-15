@@ -26,4 +26,4 @@ org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote se
 
 5.	What’s wrong with our code? How to fix/improve it? Implement your suggestions.
 
-Setting autoLaunch to false means that application install will not be performed. But the app is still executed if it is already installed on the device. I retuned appPackage and appActivity and chose autoLaunch as false, because had installed and started application before.
+Setting autoLaunch to false means that application install will not be performed. But the app is still executed if it is already installed on the device. I retuned appPackage and appActivity and chose autoLaunch as true.
